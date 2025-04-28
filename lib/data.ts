@@ -66,14 +66,14 @@ export const themes = [
     name: "Everwhite",
     description:
       "A soft and romantic design for couples who dream of a pure, elegant, and everlasting love.",
-    image: "/images/themes/themesWHITEROSE.svg",
+    image: "/images/themes/ThemesWHITEROSE.svg",
   },
   {
     id: 2,
     name: "Sasmita Tresna",
     description:
       "A graceful and timeless design for couples who cherish tradition, elegance, and the beauty of Javanese culture.",
-    image: "/images/themes/themesJAWA.png",
+    image: "/images/themes/ThemesJAWA.png",
   },
   {
     id: 3,
