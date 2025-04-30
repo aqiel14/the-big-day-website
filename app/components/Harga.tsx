@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { hargaList } from "@/lib/data";
+import Link from "next/link";
 
 export default function Harga() {
   return (
@@ -42,7 +43,9 @@ export default function Harga() {
                     </li>
                   ))}
                 </ul>
-                <Button className="mt-4 w-full">Pilih Paket</Button>
+                <Link href={paket.link} target="_blank">
+                  <Button className="mt-4 w-full">Pilih Paket</Button>
+                </Link>
               </CardContent>
             </Card>
           </motion.div>
