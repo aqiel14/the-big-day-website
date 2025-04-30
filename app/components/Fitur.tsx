@@ -1,3 +1,4 @@
+"use client";
 import {
   CheckCircle,
   Sparkles,
@@ -7,6 +8,20 @@ import {
   Shield,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay: i * 0.1,
+      ease: "easeOut",
+    },
+  }),
+};
 
 const features = [
   {
@@ -54,22 +69,28 @@ export default function Features() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <Card
+            <motion.div
               key={index}
-              className="h-full shadow-lg cursor-default transition-transform hover:shadow-xl hover:scale-[1.02]"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              custom={index}
             >
-              <CardHeader className="flex gap-4">
-                {feature.icon}
-                <CardTitle className="text-lg font-semibold whitespace-nowrap">
-                  {feature.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground text-start">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
+              <Card className="h-full shadow-lg cursor-default transition-transform hover:shadow-xl hover:scale-[1.02]">
+                <CardHeader className="flex gap-4">
+                  {feature.icon}
+                  <CardTitle className="text-lg font-semibold whitespace-nowrap">
+                    {feature.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground text-start">
+                    {feature.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

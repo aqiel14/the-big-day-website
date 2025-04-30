@@ -44,7 +44,9 @@ export default function Harga() {
                   ))}
                 </ul>
                 <Link href={paket.link} target="_blank">
-                  <Button className="mt-4 w-full">Pilih Paket</Button>
+                  <Button className="mt-4 w-full transition-all duration-300 hover:bg-primary/90 hover:scale-105">
+                    Pilih Paket
+                  </Button>
                 </Link>
               </CardContent>
             </Card>

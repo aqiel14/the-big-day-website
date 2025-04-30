@@ -12,20 +12,26 @@ export default function Tema() {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl font-bold mb-6 text-center">Tema</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {themes.map((theme) => (
+          {themes.map((theme, index) => (
             <motion.div
               key={theme.id}
-              className="overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:translate-y-[-10px]"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+                delay: index * 0.1,
+              }}
+              className="overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
             >
               <Card className="relative group h-full py-0">
                 {/* Green Overlay */}
 
                 {/* Image and Content */}
                 <CardHeader className="relative">
-                  <div className="absolute inset-0 bg-primary opacity-0 "></div>
+                  {/* <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" /> */}
+
                   <Image
                     src={theme.image}
                     alt={theme.name}
