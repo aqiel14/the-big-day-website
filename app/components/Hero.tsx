@@ -27,13 +27,13 @@ export default function Hero() {
           <h1>Day</h1>
         </div>
         <p className=" text-lg sm:text-xl max-w-md text-start">
-          Custom Digital Invitations for Your Special Day. Bring your wedding
-          vision to life with personalized designs.
+          Undangan Digital Kustom untuk Hari Istimewa Anda. Wujudkan impian
+          pernikahan Anda dengan desain yang dipersonalisasi.
         </p>
 
-        <Link href="#portfolio" className="flex">
-          <Button size="lg" className="h-14 text-lg">
-            See Our Designs
+        <Link className="flex cursor-pointer" href="#tema">
+          <Button size="lg" className="h-14 text-lg cursor-pointer">
+            Lihat Desain Kami
           </Button>
         </Link>
       </div>

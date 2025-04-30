@@ -1,6 +1,6 @@
 export const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "Fitur", href: "#fitur" },
   { label: "Harga", href: "#harga" },
   { label: "Tema", href: "#tema" },
 ];
@@ -38,6 +38,7 @@ export const hargaList = [
     price: "Rp 99.000",
     description: "Untuk pasangan yang ingin simpel dan cepat.",
     features: ["1 Tema Undangan", "Link Pribadi", "Tanpa RSVP"],
+    link: "https://wa.link/tvq7pg",
   },
   {
     id: 2,
@@ -50,6 +51,7 @@ export const hargaList = [
       "Google Maps Lokasi",
       "Musik Background",
     ],
+    link: "https://wa.link/x3ii9n",
   },
   {
     id: 3,
@@ -57,6 +59,7 @@ export const hargaList = [
     price: "Mulai Rp 299.000",
     description: "Desain sesuai permintaan dengan konsultasi langsung.",
     features: ["Semua Fitur Premium", "Desain Kustom", "Konsultasi Online"],
+    link: "https://wa.link/rumnmy",
   },
 ];
 
@@ -78,25 +81,8 @@ export const themes = [
   {
     id: 3,
     name: "Coming Soon",
-    description: "Coming Soon",
+    description: "",
     image: "/coming-soon.png",
-  },
-  {
-    id: 4,
-    name: "Coming Soon",
-    description: "Coming Soon",
-    image: "/coming-soon.png",
-  },
-  {
-    id: 5,
-    name: "Coming Soon",
-    description: "Coming Soon",
-    image: "/coming-soon.png",
-  },
-  {
-    id: 6,
-    name: "Coming Soon",
-    description: "Coming Soon",
-    image: "/coming-soon.png",
+    coming_soon: true,
   },
 ];

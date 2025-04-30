@@ -8,7 +8,7 @@ import { hargaList } from "@/lib/data";
 
 export default function Harga() {
   return (
-    <section id="harga" className="px-4 py-12 lg:px-16 bg-muted">
+    <section id="harga" className="px-4 py-12 lg:px-16">
       <div className="max-w-4xl mx-auto text-center mb-10">
         <h2 className="text-2xl font-bold">Paket Harga</h2>
         <p className="text-muted-foreground mt-2">
@@ -25,7 +25,7 @@ export default function Harga() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
           >
-            <Card className="flex flex-col justify-between h-full">
+            <Card className="flex flex-col justify-between h-full bg-[var(--background-color-primary)]">
               <CardHeader>
                 <CardTitle className="text-lg">{paket.title}</CardTitle>
                 <p className="text-xl font-bold mt-2">{paket.price}</p>

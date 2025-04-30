@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Portfolio from "./components/Portfolio";
 import Harga from "./components/Harga";
 import Tema from "./components/Tema";
+import Fitur from "./components/Fitur";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,11 @@ export default function Home() {
       <section id="home">
         <Hero />
       </section>
-      <section id="portfolio">
+      {/* <section id="portfolio">
         <Portfolio />
+      </section> */}
+      <section id="fitur">
+        <Fitur />
       </section>
       <section id="harga">
         <Harga />
