@@ -70,6 +70,7 @@ export const themes = [
     description:
       "A soft and romantic design for couples who dream of a pure, elegant, and everlasting love.",
     image: "/images/themes/ThemesWHITEROSE.svg",
+    url: null,
   },
   {
     id: 2,
@@ -77,6 +78,7 @@ export const themes = [
     description:
       "A graceful and timeless design for couples who cherish tradition, elegance, and the beauty of Javanese culture.",
     image: "/images/themes/ThemesJAWA.png",
+    url: "https://sasmita-tresna.thebigday.id",
   },
   {
     id: 3,
@@ -84,5 +86,6 @@ export const themes = [
     description: "",
     image: "/coming-soon.png",
     coming_soon: true,
+    url: null,
   },
 ];

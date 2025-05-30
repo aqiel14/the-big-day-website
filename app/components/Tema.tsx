@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Tema() {
   return (
@@ -50,9 +51,17 @@ export default function Tema() {
                 {/* DEMO Button */}
                 {theme.description !== "" && (
                   <div className="absolute inset-0 flex items-start justify-end opacity-0 transition-opacity duration-300 hover:opacity-100 z-20">
-                    <Button variant="link" size="lg">
-                      Lihat Desain
-                    </Button>
+                    {theme.url ? (
+                      <Link href={theme.url}>
+                        <Button variant="link" size="lg">
+                          Lihat Desain
+                        </Button>
+                      </Link>
+                    ) : (
+                      <Button variant="link" size="lg">
+                        Lihat Desain
+                      </Button>
+                    )}
                   </div>
                 )}
               </Card>
